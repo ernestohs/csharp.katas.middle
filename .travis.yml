@@ -1,0 +1,14 @@
+language: csharp
+
+solution: ./middle.sln
+
+before_install:
+  - wget http://nuget.org/nuget.exe -O ./.nuget/NuGet.exe
+
+install:
+
+  - sudo apt-get install mono-devel mono-dmcs nunit-console make
+
+script:
+
+  - make test
